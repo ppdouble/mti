@@ -1,0 +1,20 @@
+COMPILE:
+gcc pi.c -o pi -llpmti
+RUN:
+./pi -n numofthreads
+
+COMPILE:
+gcc sendmessage -o sendmessage -llpmti
+RUN:
+./sendmessage -n numofthreads
+
+COMPILE:
+gcc helloworld.c -o helloworld -llpmti
+RUN:
+./helloworld -n numofthreads
+
+COMPILE:
+gcc onetomany.c -o onetomany -llpmti
+RUN:
+./onetomany -n numofthreads
+

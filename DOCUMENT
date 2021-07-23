@@ -1,0 +1,37 @@
+#############
+# INTERFACE #
+#############
+===========
+BASIC
+===========
+MTI_SUCCESS 0
+MTI_FAILURE 1
+
+MTI_THREADS_MAX 60000
+
+MTI_COMM_WORLD        
+
+===========
+DATATYPE
+===========
+MTI_CHAR  
+MTI_SHORT 
+MTI_INT   
+MTI_LONG_INT
+MTI_FLOAT   
+MTI_DOUBLE
+
+MTI_Status
+
+===========
+FUNCTIONS
+===========
+int MTI_Init (int *argc, char ***argv);
+int MTI_Init_thread (void *(*start_routine) (void *));
+int MTI_Comm_rank (MTI_Comm comm, int *rank);
+int MTI_Comm_size (MTI_Comm comm, int *size);
+int MTI_Send (void *buf, int count, MTI_Datatype datatype, int dest, int tag, MTI_Comm comm);
+int MTI_Recv (void *buf, int count, MTI_Datatype datatype, int source, int tag, MTI_Comm comm, MTI_Status *status);
+int MTI_Finalize (void);
+int MTI_Barrier (MTI_Comm comm);
+#define MTI_thread_exit(status) MTI_thread_exit_((void *)status)

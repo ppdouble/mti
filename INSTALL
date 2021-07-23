@@ -1,0 +1,21 @@
+MTI
+version 0.1
+===========
+Requirement
+===========
+Linux kernel version 2.6+
+glibc-2.12+
+
+===========
+Install
+===========
+1) extrac files from tarball
+    tar -zxvf mti.tar.gz
+
+2) running
+    make
+
+3) running
+    make install
+
+MTI will be installed to '/usr/lib', with the header file in '/usr/include'.
